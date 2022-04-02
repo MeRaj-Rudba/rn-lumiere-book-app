@@ -31,9 +31,9 @@ function BookDetailsScreen(props) {
   }, []);
 
   const Reviews = (props) => {
-    console.log(props.reviews);
+    // console.log(props.reviews);
 
-    return <Text>Reviews</Text>;
+    return <Text style={styles.title}>Reviews</Text>;
   };
 
   const handleStar = (givenRating) => {
@@ -73,9 +73,8 @@ function BookDetailsScreen(props) {
                 styles.genre,
               ]}
             >
-              <Text style={[tw`text-${Theme.themeColor}-700`, styles.text]}>
-                <Ionicons name="pricetag" color={Theme.themeColor} />{" "}
-                {book.genre}
+              <Text style={[tw`text-gray-700`, styles.text]}>
+                <Ionicons name="pricetag" color="gray" /> {book.genre}
               </Text>
             </View>
 
@@ -103,9 +102,18 @@ function BookDetailsScreen(props) {
               <Text style={[styles.title]}>Availability : </Text>
               {book.availability}
             </Text>
+            <Text style={[tw``, styles.text]}>
+              <Text style={[styles.title]}>Rank : </Text>
+              {book.rank}
+            </Text>
+
             <Text>
               <Text style={[styles.title]}>Rating: </Text>
-              {book.rating ? <Text>{book.rating}/5</Text> : <Text>N/A</Text>}
+              {book.rating ? (
+                <Text>{book.rating}/5</Text>
+              ) : (
+                <Text style={styles.text}>N/A</Text>
+              )}
             </Text>
             {book.reviews && <Reviews reviews={book.reviews} />}
           </View>
@@ -135,7 +143,7 @@ const styles = StyleSheet.create({
     fontFamily: "app-font-bold",
   },
   italic: {
-    fontFamily: "app-font-light",
+    fontFamily: "app-font-italic",
   },
   text: {
     fontFamily: "app-font-regular",

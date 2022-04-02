@@ -19,13 +19,8 @@ function AppButton(props) {
   return (
     <View style={[styles.button, props.style]}>
       <Touchable onPress={props.onPress}>
-        <View style={tw`px-6 py-2 bg-${props.themeColor || "purple"}-500 `}>
-          <Text
-            style={[
-              tw`text-center text-${props.themeColor || "purple"}-100`,
-              styles.text,
-            ]}
-          >
+        <View style={tw`px-6 py-2 bg-${props.themeColor || "purple"}-400 `}>
+          <Text style={[tw`text-center text-white`, styles.text]}>
             {props.children}
           </Text>
         </View>

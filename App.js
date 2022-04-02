@@ -9,15 +9,9 @@ import AppButton from "./components/UI/AppButton";
 
 const fetchFonts = async () => {
   return Font.loadAsync({
-    "app-font-regular": require("./assets/fonts/MPLUS1-Regular.ttf"),
-    "app-font-black": require("./assets/fonts/MPLUS1-Black.ttf"),
-    "app-font-bold": require("./assets/fonts/MPLUS1-Bold.ttf"),
-    "app-font-extraBold": require("./assets/fonts/MPLUS1-ExtraBold.ttf"),
-    "app-font-extraLight": require("./assets/fonts/MPLUS1-ExtraLight.ttf"),
-    "app-font-light": require("./assets/fonts/MPLUS1-Light.ttf"),
-    "app-font-medium": require("./assets/fonts/MPLUS1-Medium.ttf"),
-    "app-font-semiBold": require("./assets/fonts/MPLUS1-SemiBold.ttf"),
-    "app-font-thin": require("./assets/fonts/MPLUS1-Thin.ttf"),
+    "app-font-regular": require("./assets/fonts/PTSans-Regular.ttf"),
+    "app-font-bold": require("./assets/fonts/PTSans-Bold.ttf"),
+    "app-font-italic": require("./assets/fonts/PTSans-Italic.ttf"),
   });
 };
 function App() {

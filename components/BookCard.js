@@ -35,10 +35,10 @@ function BookCard(props) {
         <Text
           style={[
             tw`mb-3 font-normal text-gray-700 dark:text-gray-400`,
-            styles.text,
+            styles.italic,
           ]}
         >
-          {props.book.author}
+          by {props.book.author}
         </Text>
 
         <AppButton
@@ -59,6 +59,9 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: "app-font-bold",
+  },
+  italic: {
+    fontFamily: "app-font-italic",
   },
 });
 
